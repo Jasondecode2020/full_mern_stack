@@ -231,13 +231,58 @@ function sum(a = 1, b = 2) {
 
 // callback function
 
-function normalFunction(param) {
-  console.log(param);
+// function normalFunction(param) {
+//   console.log(param);
+// }
+
+// function sum(x, y, callback) {
+//   const sum = x + y;
+//   callback(sum);
+// }
+
+// sum(1, 2, normalFunction);
+
+// setTimeout(() => {
+//   console.log("arrow");
+// }, 1000);
+
+// what is closure, lexical scope
+// a function passed to another
+// const number = 1;
+// function foo() {
+//   console.log(number);
+// }
+// function bar(fn) {
+//   const number = 2;
+//   fn();
+// }
+// bar(foo);
+
+// a function was returned by another
+
+// function foo() {
+//   const number = 1;
+//   return () => {
+//     console.log(number);
+//   };
+// }
+// let number = 100;
+// foo()(); // 1 // the second () for executing the errow function
+
+function createCounter() {
+  let counter = 0;
+  const increment = () => {
+    counter++;
+  };
+  const getCount = () => {
+    return counter;
+  };
+  return {
+    increment,
+    getCount,
+  };
 }
 
-function sum(x, y, callback) {
-  const sum = x + y;
-  callback(sum);
-}
-
-sum(1, 2, normalFunction);
+const counter = createCounter();
+counter.increment();
+console.log(counter.getCount());
