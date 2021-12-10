@@ -123,10 +123,82 @@ this time, the i is already 5 and arr[5] is undefined
 //   }, 10000);
 // }
 
-var arr = [10, 12, 15, 21, 1];
-for (var i = 0; i < arr.length; i++) {
-  setTimeout(function () {
-    console.log("Index: " + i + ", element: " + arr[i]);
-  }, 2000);
-  console.log("Index: " + i + ", element: " + arr[i]);
+// var arr = [10, 12, 15, 21, 1];
+// for (var i = 0; i < arr.length; i++) {
+//   setTimeout(function () {
+//     console.log("Index: " + i + ", element: " + arr[i]);
+//   }, 2000);
+//   console.log("Index: " + i + ", element: " + arr[i]);
+// }
+
+// const firstName = "mason";
+
+// console.log(`hello ${firstName}`);
+
+// let name = 1; // we don't use name as variable
+
+// console.log("I'm mason");
+// console.log('I"m mason');
+
+// spread operator
+
+// const arr = [1, 2, 3];
+// let newArr = [...arr, 4, 5];
+// console.log(newArr);
+
+// const fruit = { name: "apple", color: "red" };
+
+// let newFruit = { ...fruit, color: "green" };
+// console.log(newFruit);
+// newFruit = { color: "red", ...fruit };
+// console.log(newFruit);
+
+// { name: 'apple', color: 'green' }
+// { color: 'red', name: 'apple' }
+
+// destructuring
+
+// const fruit = { name: "apple", color: "red" };
+// const { name: fruitName, color: fruitColor } = fruit;
+
+// console.log(fruitName, fruitColor);
+
+// for arr, there is sequence
+// const fruits = [
+//   { name: "apple", color: "red" },
+//   { name: "pear", color: "yellow" },
+// ];
+// const [apple, pear] = fruits;
+// console.log(apple);
+// console.log(pear);
+// const [{ color: appleColor }, { color: pearColor }] = fruits;
+// console.log(appleColor);
+// console.log(pearColor);
+
+// const [foo, [[bar], baz]] = [1, [[2], 3]];
+// console.log(foo, bar, baz);
+
+// const [, , third] = ["foo", "bar", "baz"];
+// console.log(third);
+
+// const [head, ...tail] = [1, 2, 3, 5];
+// console.log(head);
+// console.log(tail);
+
+// const { name, ...rest } = { color: "appleColor", color: "pearColor" };
+// console.log(rest);
+
+// const [missing = true] = [];
+// console.log(missing);
+
+// const { location = "sydney" } = { color: "appleColor", color: "pearColor" };
+// console.log(location); // destructuring a value not exist
+
+// function
+
+function sum(a = 1, b = 2) {
+  // with default value;
+  return a + b;
 }
+console.log(sum());
+console.log(sum(3, 4));
