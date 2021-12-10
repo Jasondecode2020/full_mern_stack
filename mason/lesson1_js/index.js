@@ -194,11 +194,50 @@ this time, the i is already 5 and arr[5] is undefined
 // const { location = "sydney" } = { color: "appleColor", color: "pearColor" };
 // console.log(location); // destructuring a value not exist
 
-// function
-
+// function declaration is ok for sequence
+/*
+console.log(sum());
+console.log(sum(3, 4));
 function sum(a = 1, b = 2) {
   // with default value;
   return a + b;
 }
-console.log(sum());
-console.log(sum(3, 4));
+*/
+
+// arrow function express is not ok for sequence
+// console.log(sum(1, 2)); // wrong Cannot access 'sum' before initialization
+// const sum = (a = 1, b = 2) => a + b;
+// console.log(sum(1, 2));
+
+// const add = (x, y) => {
+//   return {
+//     x: x,
+//     y: y,
+//   };
+// };
+
+// const add_new = (x, y) => {
+//   // es6 new syntax
+//   return {
+//     x,
+//     y,
+//   };
+// };
+
+// console.log(add_new(1, 1));
+
+// const add_new = (x, y) => ({ x, y });
+// console.log(add_new(1, 1));
+
+// callback function
+
+function normalFunction(param) {
+  console.log(param);
+}
+
+function sum(x, y, callback) {
+  const sum = x + y;
+  callback(sum);
+}
+
+sum(1, 2, normalFunction);
