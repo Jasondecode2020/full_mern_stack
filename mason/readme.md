@@ -4,7 +4,7 @@
 
 nodeJS include js
 
-### lesson 1
+### lesson 1 listened 3 times: 10h
 
 ES
 ECMA Script European Computer Manufacturer’s Association: ECMA
@@ -123,3 +123,5 @@ for (var i = 0; i < arr.length; i++) {
   }, 1000);
 }
 ```
+
+### lesson 2 10h

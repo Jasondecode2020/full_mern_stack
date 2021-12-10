@@ -361,3 +361,45 @@ const calendar = {
 calendar.normal();
 calendar.arrow();
 */
+/*
+const object = {
+  message: "Hello World",
+
+  getMessage() {
+    const message = "hello earch";
+    return this.message;
+  },
+};
+
+console.log(object.getMessage()); // ??
+*/
+
+/*
+const object = {
+  who: "World",
+
+  greet() {
+    return `Hello, ${this.who}!`;
+  },
+
+  farewell: () => {
+    return `Goodbye, ${this.who}`;
+  },
+};
+
+console.log(object.greet()); // ??
+console.log(object.farewell()); //?? why undefined
+*/
+
+const object = {
+  who: "mason",
+  cb() {
+    console.log(`Hello, ${this.who}!`);
+  },
+};
+
+function foo(cb) {
+  cb();
+}
+foo(object.cb); // ?? why undefined
+object.cb(); // ??
