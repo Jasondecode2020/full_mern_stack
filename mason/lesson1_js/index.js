@@ -269,20 +269,95 @@ function sum(a = 1, b = 2) {
 // let number = 100;
 // foo()(); // 1 // the second () for executing the errow function
 
-function createCounter() {
-  let counter = 0;
-  const increment = () => {
-    counter++;
-  };
-  const getCount = () => {
-    return counter;
-  };
-  return {
-    increment,
-    getCount,
-  };
-}
+// function createCounter() {
+//   let counter = 0;
+//   const increment = () => {
+//     counter++;
+//   };
+//   const getCount = () => {
+//     return counter;
+//   };
+//   return {
+//     increment,
+//     getCount,
+//   };
+// }
 
-const counter = createCounter();
-counter.increment();
-console.log(counter.getCount());
+// const counter = createCounter();
+// counter.increment();
+// console.log(counter.getCount());
+
+// what is iffes
+
+// (function () {})();
+
+// this is important
+// context
+
+// function foo() {
+//   console.log(this);
+// }
+
+// // change value of this
+// foo.call({ number: 1 }); // {number: 1}
+// foo.apply({ number: 2 }); // {number: 2}
+// const bar = foo.bind({ number: 3 }); // {number: 3}
+// bar();
+
+// const calendar = {
+//   currentDay: 6,
+//   nextDay() {
+//     this.currentDay++;
+//     console.log(this.currentDay);
+//   },
+// };
+// calendar.nextDay();
+
+// const calendar = {
+//   currentDay: 6,
+//   nextDay() {
+//     setTimeout(() => {
+//       this.currentDay++;
+//       console.log(this);
+//       console.log(this.currentDay);
+//     });
+//   },
+// };
+// calendar.nextDay();
+
+/*
+const calendar = {
+  currentDay: 6,
+  nextDay() {
+    setTimeout(
+      function () {
+        this.currentDay++;
+        console.log(this);
+        console.log(this.currentDay);
+      }.bind(this)
+    );
+  },
+};
+calendar.nextDay();
+*/
+// quiz for this, check the result
+/*
+const calendar = {
+  currentDay: 6,
+  normal: function () {
+    console.log(1, this);
+    setTimeout(function () {
+      console.log(2, this);
+    });
+  },
+  arrow: function () {
+    console.log(3, this);
+    setTimeout(() => {
+      console.log(4, this);
+    });
+  },
+};
+
+calendar.normal();
+calendar.arrow();
+*/
