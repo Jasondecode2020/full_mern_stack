@@ -127,3 +127,54 @@ for (var i = 0; i < arr.length; i++) {
 ### lesson 2 10h
 
 array operations
+
+//reduce
+
+```js
+const numbers = [1, 2, 3];
+const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
+console.log(sum);
+
+let accu = 0;
+for (let i in numbers) {
+  accu += numbers[i];
+}
+console.log(accu);
+
+// search
+
+console.log(numbers.includes(2));
+console.log(numbers.indexOf(2)); // get first index of number 2
+console.log(numbers.some((x) => x > 10));
+console.log(numbers.some((x) => x < 2));
+```
+
+use filter
+
+```js
+// use filter
+const odds = numbers.filter((i) => i % 2);
+console.log(odds);
+console.log(numbers);
+
+const fruits = [
+  {
+    name: "apple",
+    color: "green",
+  },
+  {
+    name: "pear",
+    color: "yellow",
+  },
+];
+
+const filteredFruits = fruits.filter((i) => i.color === "green");
+console.log(filteredFruits);
+console.log(fruits);
+```
+
+nodejs
+frontend, backend, interface
+CSR: client side rendering
+
+backend: Router - Controllers - Models
