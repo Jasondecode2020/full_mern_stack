@@ -216,3 +216,7 @@ ndoe.js
 5 fast and scalable
 
 node start.js : for executing the start.js in node file
+
+// framework, module, package, library
+
+server.js for http server

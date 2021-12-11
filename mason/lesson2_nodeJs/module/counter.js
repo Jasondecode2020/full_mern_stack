@@ -9,3 +9,5 @@ function getCount() {
 }
 
 module.exports = { increment, getCount };
+
+console.log(this === module.exports);
