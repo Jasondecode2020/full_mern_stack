@@ -406,6 +406,8 @@ GET /v1/addBooks X
 4 url 使用嵌套
 GET /posts/:postId/comment/:commentId
 
+GET /posts/{postId}/comments
+
 5 注意结果大小
 10000 个 book 数据
 GET /v1/books -> 10 个数据， 当前第一页
@@ -419,3 +421,7 @@ GET/ v1/books?page=2&pageSize=10
 "errro"
 
 paypal, twitter api
+
+dataflow: client to server to database
+
+// readable maintainable and reuseable
