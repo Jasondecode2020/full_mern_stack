@@ -125,3 +125,5 @@ for (var i = 0; i < arr.length; i++) {
 ```
 
 ### lesson 2 10h
+
+array operations
