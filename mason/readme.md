@@ -178,3 +178,39 @@ frontend, backend, interface
 CSR: client side rendering
 
 backend: Router - Controllers - Models
+
+// js 单线程语言
+process 进程
+thread 线程
+
+blocking problem
+
+等待: 同步 = 阻塞
+不等待： 异步 = 非阻塞
+事件触发
+
+heap 和 stack, 用来存储数据
+call stack： LIFO: function call, 当前正在执行的命令
+queue： FIFO, event loop， callback queue
+
+This is a very good video to explain callback queue, stack and event loop
+event loop is used to check callback queue, if not empty and stack is empty, then put event to stack
+event loop: https://www.youtube.com/watch?v=8aGhZQkoFbQ
+
+setTimeout: in Web API
+
+why single theaded: js in web somethings are slow
+
+if slow, it will block, if not sync
+
+ndoe.js
+
+1 js run environment build on Chrome's V8 engine
+
+2 async, event driven
+
+3 non-blocking I/O
+
+4 backend
+
+5 fast and scalable
