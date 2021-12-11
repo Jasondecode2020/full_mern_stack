@@ -214,3 +214,5 @@ ndoe.js
 4 backend
 
 5 fast and scalable
+
+node start.js : for executing the start.js in node file
