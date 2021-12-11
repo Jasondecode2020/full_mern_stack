@@ -425,3 +425,11 @@ paypal, twitter api
 dataflow: client to server to database
 
 // readable maintainable and reuseable
+
+### lesson 4 npm
+
+https://newsapi.org
+
+prototype
+why need, js is written in this way
+object inherit properties and methods from it's prototype ancestry
