@@ -457,3 +457,73 @@ action should have a type in redux
     ease of testing
 
 42. React Router?
+
+React 核心思想
+
+Readable Maintainable and Reusable
+
+1. Single Responsibility
+
+2. Open / Close
+
+3. Dependency Injection
+
+Component + Declarative
+
+1. 划分组件
+2. 静态代码 JSX + Component + props
+3. 放置 state， state
+4. state lifting, state lifting + lifecycle
+5. 反向数据流, callback function
+
+6. 划分组件 -> 责任上自成一体 + 组件多次复用
+7. props -> 一个组件在不同使用场景上的多样化处理
+   2.1. 命名
+   2.2 实现相应功能
+   2.3 传值
+8. state -> 当任何一个东西是动态的时候
+   3.1 命名
+   3.2 调用 handler
+   3.3 根据 state 改变做相应的处理
+9. lifecycle -> 获取数据 -> useEffect / componentDidMount
+   ->动态东西和用户操作无关， useEffect / componentDidUpdate, useEffect () => {} / componentwillUnmount
+10. 衍生状态/数据 -> 状态和用户操作相关 ？ 其他状态相关
+11. 状态提升
+    6.1 将状态写到最小公用组件里
+    6.2 将组件的状态改为 props
+    6.3 传递 props
+
+```js
+useEffect(() => {
+  // 错误用法， 要么不跑， 要么一直跑
+});
+
+useEffect(() => {
+  // componentDidMount()
+}, []);
+
+useEffect(() => {
+  // componentDidUpdate()
+}, [dependency]);
+
+useEffect(() => {
+  // componentWillUnmount()
+  return () => {};
+}, []);
+```
+
+Phone Interview:
+
+check the person is ok, ask basic info, and introduce the company.
+Code Test: take home code test
+实现一个小页面
+email to company
+
+Tech Interview:
+if code test is ok, check your ability
+if it is the same as code test
+
+Behavior:
+Culture
+
+HR Interview:

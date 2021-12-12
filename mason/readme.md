@@ -1,6 +1,6 @@
 ## backend
 
-30 hours
+30 hours X 3 + 10h = 100h
 
 nodeJS include js
 
@@ -227,7 +227,7 @@ server.js for http server
 
 ### 3 6h node.js
 
-listened 2 times
+listened 3 times 10h
 
 use v12 or v14 is ok
 should not use the new version, may have bugs
@@ -426,10 +426,126 @@ dataflow: client to server to database
 
 // readable maintainable and reuseable
 
-### lesson 4 npm
+### lesson 4 npm and express
+
+10h + 3 times
 
 https://newsapi.org
 
 prototype
 why need, js is written in this way
 object inherit properties and methods from it's prototype ancestry
+
+/\*
+function Person(name, age, color) {
+this.name = name;
+this.age = age;
+this.color = color;
+}
+
+const father = new Person("john", 28, "green");
+const mother = new Person("lily", 28, "green");
+
+Person.prototype.getName = function () {
+return "Name: " + this.name;
+};
+
+console.log(father.name);
+console.log(mother.name);
+console.log(father.getName());
+console.log(mother.getName());
+_/
+/_
+const obj = {};
+obj.toString = function () {
+console.log("Object");
+};
+console.log(obj.toString());
+
+var arr = [1, 2, 3];
+let a = arr.indexOf(2);
+console.log(a);
+console.log(arr.toString());
+\*/
+
+/\*
+var areOccurrencesEqual = function (s) {
+const map = {};
+for (let c of s) {
+console.log(map[c]);
+map[c] = (map[c] || 0) + 1;
+}
+const firstValue = map[s[0]];
+for (let c in map) {
+if (map[c] !== firstValue) return false;
+}
+return true;
+};
+
+const res = areOccurrencesEqual("abacbc");
+console.log(res);
+\*/
+
+npm: Node Package Manager
+npmjs.com
+express: there are 30 dependencies in express
+and many other packages depends on express
+
+#### npm i express
+
+how to choose package
+downloads, github star, issues and pull request time
+if there is issues, and feedback from developer
+
+why?
+
+start node.js app
+
+npm init
+npm init -y
+npm uninstall express
+npm install @3express
+
+do not use npm update, may cause error
+if you have to update version, but may have a lot of problem
+
+npm outdated
+
+.gitignore
+node modules
+
+package version express: ^4.16.4, ^fix major version
+package.lock.json remember all versions
+do not use git force
+do not touch package.lock.json
+major version need to check
+
+yarn is similar to npm
+
+but for a group develop, we need to use either npm or yarn
+
+```
+"devDependences": {
+  "nodemon": "^1.18.9"
+}
+```
+
+nodemon auto update server
+installed in dev
+npm i nodemon -D
+npm i -g nodemon // global tools
+
+`npm list -g --depth 0` check global installed
+
+npm run dev
+npm start
+"dev": "nodemon index.js"
+.js normally write with .js
+
+`npm i nodemon` for nodemon
+
+how to get data
+
+1. body, app.use(express.json());
+2. params
+3. query

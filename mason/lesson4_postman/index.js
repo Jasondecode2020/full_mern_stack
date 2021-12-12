@@ -1,30 +1,37 @@
-/*
-function Person(name, age, color) {
-  this.name = name;
-  this.age = age;
-  this.color = color;
-}
+const express = require("express");
 
-const father = new Person("john", 28, "green");
-const mother = new Person("lily", 28, "green");
+const app = express();
 
-Person.prototype.getName = function () {
-  return "Name: " + this.name;
-};
+app.use(express.json());
 
-console.log(father.name);
-console.log(mother.name);
-console.log(father.getName());
-console.log(mother.getName());
-*/
+// app.mehtod(path, callback(routehandler))
+app.get("/", (req, res) => {
+  res.json({ name: "mason" });
+});
 
-const obj = {};
-obj.toString = function () {
-  console.log("Object");
-};
-console.log(obj.toString());
+// if use post, we need to get data from body
+// then use middleware app.use(express.json());
+app.put("/:id", (req, res) => {
+  const { name } = req.body;
+  const { title } = req.query;
+  const { id } = req.params;
+  res.send({ name, title, id });
+});
 
-var arr = [1, 2, 3];
-let a = arr.indexOf(2);
-console.log(a);
-console.log(arr.toString());
+app.patch("/:id", (req, res) => {
+  const { name } = req.body;
+  const { title } = req.query;
+  const { id } = req.params;
+  res.send({ name, title, id });
+});
+
+app.post("/:id", (req, res) => {
+  const { name } = req.body;
+  const { title } = req.query;
+  const { id } = req.params;
+  res.send({ name, title, id });
+});
+
+app.listen(3000, () => {
+  console.log("Server is listening on port 3000");
+});
